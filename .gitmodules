@@ -1,0 +1,3 @@
+[submodule "include/scurvy"]
+	path = include/scurvy
+	url = git@github.com:dburkart/scurvy.git
