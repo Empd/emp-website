@@ -56,9 +56,31 @@ body {
 	padding: 5px;
 }
 
+.content a,a:hover {
+    color: #e2e2e2;
+}
+
 #copyright {
 	position: absolute;
 	bottom: 0;
 	text-align: center;
 	width: 1024px;
 }
+
+/* Blog posts */
+.content .post { }
+
+.content .post h2 {
+    border-bottom: 2px solid #e2e2e2;
+}
+
+.content .post h4 {
+    font-size: 8px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.content .post p {
+    color: #e0e0e0;
+}
+
