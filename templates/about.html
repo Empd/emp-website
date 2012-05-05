@@ -1,8 +1,87 @@
 {include header.html}
 
 <div class="content">
-        
+    <h3>Short Description</h3>
+    <em>Emp or Extensible monitoring platform is the means by which you can monitor anything your heart desires.</em>
 
+    <h3>Longer Description</h3>
+    <p> Emp, pronounced "Imp", is a program that someone can use to make their own home monitoring system. 
+    Emp gives them the ability to harness services they use already in once central hub. Taking services like
+    Twitter, Facebook, Google+, their RSS feeds, weather services, stock tickers, their home security center,
+    their entertainment equipment, and more and turning them into attachments to track.
+    </p>
+
+    <p>By tracking these attachments, or "Plugins", a user can have Emp wait for events and then take action
+    on them. For example, if someone tags a picture of you on Facebook, you can have Emp to instantly Email you
+    and then save the image to your Dropbox account for safe keeping.
+    </p>
+
+    <p>But the opportunities are endless, or at least bounded only by the imaginations of plugin developers. 
+    Right now we don't have that many plugins, and the ones that are bundled with Emp's core framework are 
+    not that special. Please take a look at the <a href="pluginlist.php">Plugin Tally</a> to see the most 
+    requested ones, and possibly add your own to that list. We are waiting to hear from you!
+    </p>
 </div>
+
+<div class="content">
+    <div class="post">
+        <h2>Plugins</h2>
+        <p>Plugins are attachments and extensions to the core Emp framework. Emp by itself doesn't do anything
+        but look pretty. Plugins are wrappers that let Emp know how to talk to and monitor services on the web,
+        at home, and anywhere else. Emp only makes two requirments, anything that happens inside the service
+        is called an <em>Event</em>, and must be allowed to trigger actions in Emp, and also any function that the 
+        service allows the standard user to do must be opened up as a <em>Command</em>.
+        </p>
+
+        <h4>Events</h4>
+        <p>Almost every plugin can trigger Events. An event is something that happened inside the plugin that
+        Emp or its user should know about. This could mean things like, getting a direct message in the Twitter
+        plugin, or getting an email in the Email plugin, or even seeing a person get closer than 3 ft away using
+        the KINECT plugin.
+        </p>
+
+        <h4>Commands</h4>
+        <p>Events are used to alert the user of things happening to the services they care about, but don't let
+        the user interact with those services. Commands are what allow this. Commands are the actions a user can
+        take on a plugin or service. Some examples would be sending a tweet on Twitter, sending an Email, saving
+        some information to a log file, adding a file to Dropbox, etc.
+        </p>
+    </div>
+</div>
+
+<div class="content">
+    <div class="post">
+        <h2>Subscriptions</h2>
+        <p>Subscriptions are what make Emp what it is. In this world of information overflow, Events can happen
+        all the time, and in a number that is unreasonable to measure or monitor by yourself. So Emp allows you
+        to subscribe Events from one plugin to the Commands of another. An example of this could be subscribing 
+        your stock ticker plugin's 10 cent drop event to your email plugins "Send Email" command so you will 
+        automatically know when there has been a 10 cent drop in one of your stocks. 
+        </p>
+        <p> This may be a simple example but subscriptions can be then compounded and filtered upon to get even
+        more complex interactions of events. Another example could be your weather plugin triggering a "Severe 
+        Weather Alert" event and your Calendar triggering a "Meeting at 8am" Event. Your Alarm Clock plugin 
+        could see both of these events and then know to set your alarm for 6am rather than 7am. Or if you really
+        wanted, it could alert you to the change and ask if you wanted to stay home sick! :)
+        </p>
+    </div>
+</div>
+ 
+<div class="content">
+    <div class="post">
+        <h2>Interfaces</h2>
+        <p>Emp is headless, it exists in the background watching and helping you with your day. But we need ways
+        of communicating with it. Well we wanted our communication method to be as generic and universal as Emp's
+        capabilities, so we gave Emp the most generic and standards compliant interface we could. Which means there
+        isn't just one, there are tons!
+        </p>
+        <p>An interface can talk to Emp through a simple protocol so any type of interface will work. We will
+        bundle a web interface as well as a generic command line interface with the release of version 1.0. We hope
+        more interfaces will be released soon such as for iOS, Android, XBox 360, and other OS integrations for Linux
+        and Windows.
+        </p>
+    </div>
+</div>
+
 
 {include footer.html}
