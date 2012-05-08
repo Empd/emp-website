@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 blitText = function( id, text, callback, blit_speed, blink ) {
-	blit_speed = typeof blit_speed !== 'undefined' ? blit_speed : 100;
+	blit_speed = typeof blit_speed !== 'undefined' ? blit_speed : 400;
 	blink = typeof blink !== 'undefined' ? blink : true;
 
 	var i = 0;

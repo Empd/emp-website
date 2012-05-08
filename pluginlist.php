@@ -2,7 +2,7 @@
 
 	require_once 'include/scurvy/src/scurvy.php';
 
-	$template = new Scurvy( 'index.html', 'templates/' );
+	$template = new Scurvy( 'pluginlist.html', 'templates/' );
 
 	$template->set( 'title', 'Extensible Monitoring Platform' );
 

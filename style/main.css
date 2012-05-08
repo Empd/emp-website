@@ -6,6 +6,7 @@ body {
 	color: #e2e2e2;
 	font-size: 10pt;
 	width: 916px;
+	list-style-type: none;
 }
 
 #heading {
@@ -61,10 +62,11 @@ body {
 }
 
 #copyright {
-	position: absolute;
-	bottom: 0;
-	text-align: center;
-	width: 1024px;
+	float: bottom;
+	text-align: right;
+	clear: both;
+	padding: 5px;
+	height: 4em;
 }
 
 /* Blog posts */
@@ -76,7 +78,7 @@ body {
 
 .content .post h4 {
     font-size: 8px;
-    float: left;
+    float: right;
     margin-bottom: 5px;
 }
 
@@ -84,3 +86,29 @@ body {
     color: #e0e0e0;
 }
 
+.content .post li {
+	list-style-type: circle;
+}
+
+/* Sign up Buttons */
+
+input#email {
+    width: 217px;
+    height: 42px;
+    border: 0 none;
+    padding: 0 0 0 20px;
+    color: #868686;
+    margin-right: 10px;
+    line-height: 40px;
+}
+
+input#submit {
+    background: url(images/button.png) no-repeat scroll 0 0;
+    width: 92px;
+    height: 43px;
+    border: 0 none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #393939;
+}
