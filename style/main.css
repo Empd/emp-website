@@ -7,13 +7,29 @@ body {
 	font-size: 10pt;
 	width: 916px;
 	list-style-type: none;
+	
+	background-image:url(http://emp-d.com/images/antenna_tower.png);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: left 100%;
+}
+
+#title {
+	font-size: 48pt;
+	text-align: left;
+	font-family: "sax-mono regular", Monaco, monospace;
+	
+	background-image: url(http://emp-d.com/images/emp_inverted.png);
+	background-color: #0d0d0d;
+	background-size: 45%;
+	background-repeat: no-repeat;
+	background-position: top right;
 }
 
 #heading {
 	font-size: 36pt;
 	border-bottom: 2px solid #e2e2e2;
-	height: 54px;
-	margin: 0 auto;
+	text-align: right;
 }
 
 /* Navigation */
@@ -33,6 +49,10 @@ body {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+
+#left-nav ul li ul {
+	margin-left: 15px;
 }
 
 #left-nav a,a:hover {
@@ -103,7 +123,7 @@ input#email {
 }
 
 input#submit {
-    background: url(images/button.png) no-repeat scroll 0 0;
+    background: url(http://emp-d.com/images/button.png) no-repeat scroll 0 0;
     width: 92px;
     height: 43px;
     border: 0 none;

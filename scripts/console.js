@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	blitText( 'heading', 'EMP' );
+	//blitText( 'heading', 'EMP' );
 });
 
 blitText = function( id, text, callback, blit_speed, blink ) {

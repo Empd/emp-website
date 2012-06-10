@@ -1,24 +1,35 @@
 {include header.html}
 
-<div class="contents">
-</div>
 
 <div class="content" id="core">
-    <p>
-    
+<div class="post"> <h2>EMP Core</h2>
+    <p>EMP is a server that can run on a single computer or a cluster of them. Since EMP's core is written in <a href="http://erlang.org">Erlang</a>, nodes can be connected securely with encryption and do not need to be all in the same location. You can even have EMP separate and load balance all of the plugins across the cluster to keep things running at top speed.
     </p>
-</div>
+    <p>Erlang also provides the ability to give a system fault tolerance. We have taken full advantage of this feature to make sure EMP will be able to run non-stop and catch all of those events that you need to catch. This means that we follow Erlang's OTP guidlines and support clustering to increase fault-tolerance.
+    </p>
+    <p>The core is broken up into a tree structure, to support maximum seperation of repsonsiblity. The EMP server also supports users, which can each have their own plugins. A user will also be able to subscribe to (but not interact with) internal system/root level plugins that can be used to monitor single services. We allow for this so that security systems can have several users monitor system level cameras without needing to run multiple camera watching plugins.
+    </p>
+    <p> We will provide a UML and OTP tree documents, here when they are finalized.
+    </p>
+</div></div>
 
 <div class="content" id="plugins">
-    <p> 
-           
+<div class="post"> <h2>EMP Plugins</h2>
+    <p> The plugin API is meant to be as simple as possible in order to facilitate ease of use in dealing with already in place software. EMP's goal is to make it easy for developers to quickly tie existing software into EMP, but also make full use of EMP's capabilities and provide full coverage over all events generated from existing software.
     </p>
-</div>
+    <p> Plugin developers will be able to write plugins in any language provided by <a href="http://thrift.apache.org">Apache Thrift</a>. We are using this interfacing language combined with a memory sharing technique for very fast communication between EMP and the plugin you are developing. If there is a language that you want to use, but that Thrift does not support yet, please consider contributing to the Thrift <a href="http://thrift.apache.org/developers/">code base</a>.
+    </p>
+    <p> We hope to provide you with the final version of the Plugin API shortly. We are at version 0.8 and will be chugging away at it this summer.
+</div></div>
 
 <div class="content" id="interfaces">
-    <p>
-
-    <p>
-</div>
+<div class="post"> <h2>EMP Interfaces</h2>
+    <p>In order to stay as generic, but as useful as possible, EMP opens up its interfacing protocol as a TCP socket based API as well as a RESTful HTTP API. However, you should never need to touch the APIs as a developer unless you want to make a custom interface for a set of plugins. EMP will come with three generic interfaces capable of handling all interaction between a user and the EMP system, two of them are command line interfaces and the third is an internal web interface.
+    </p>
+    <p>The two command line interfaces are extremely generic and provide full coverage of access to a running EMP node. The first is a bundled Erlang Console that will allow you to access running processes directly. The second is EMPi, which is a python based ncurses interface using the tcp socket interface as described above.
+    </p>
+    <p>The web interface is meant to be as user-friendly as possible and provide abstractions above the base level commands. The web interface is as of now, not completed but its high on the to-do list. If you are graphically inclined and would like to help with this UI, please <a href="mailto:dev@emp-d.com">contact the developers</a>!
+    </p>
+</div></div>
 
 {include footer.html}
